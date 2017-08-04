@@ -10,18 +10,18 @@
     "build": "browserify src/index.js -o bundle.js",
     "lint": "eslint --fix .",
     "precommit": "npm run lint",
-    "start": "concurrently \"watchify src/index.js -o bundle.js\" \"watch-http-server\""
+    "start": "concurrently -c green,yellow \"watchify src/index.js -o bundle.js -v\" \"live-server\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oparamo/vr.git"
   },
   "keywords": [
-    "vr",
-    "virtual",
-    "reality",
     "aframe",
-    "a-frame"
+    "a-frame",
+    "vr",
+    "virtual reality",
+    "webvr"
   ],
   "author": "Oscar Paramo",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "concurrently": "3.5.0",
     "eslint": "4.3.0",
     "husky": "0.14.3",
-    "watch-http-server": "0.7.6",
+    "live-server": "1.2.0",
     "watchify": "3.9.0"
   },
   "dependencies": {

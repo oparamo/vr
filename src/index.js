@@ -1,3 +1,3 @@
 'use strict';
 
-// do cool stuff
+console.log('do cool stuff');

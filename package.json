@@ -7,10 +7,10 @@
     "npm": "^5.3.0"
   },
   "scripts": {
-    "build": "browserify src/index.js -o bundle.js",
+    "build": "webpack src/index.js bundle.js",
     "lint": "eslint --fix .",
     "precommit": "npm run lint",
-    "start": "concurrently -c green,yellow \"watchify src/index.js -o bundle.js -v\" \"live-server\""
+    "start": "webpack-dev-server --no-info --colors src/index.js bundle.js"
   },
   "repository": {
     "type": "git",
@@ -30,12 +30,10 @@
   },
   "homepage": "https://github.com/oparamo/vr#readme",
   "devDependencies": {
-    "browserify": "14.4.0",
-    "concurrently": "3.5.0",
     "eslint": "4.3.0",
     "husky": "0.14.3",
-    "live-server": "1.2.0",
-    "watchify": "3.9.0"
+    "webpack": "3.4.1",
+    "webpack-dev-server": "2.6.1"
   },
   "dependencies": {
     "aframe": "0.6.1"

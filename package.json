@@ -10,7 +10,7 @@
     "build": "webpack src/index.js bundle.js",
     "lint": "eslint --fix .",
     "precommit": "npm run lint",
-    "start": "webpack-dev-server --no-info --colors src/index.js bundle.js"
+    "start": "webpack --watch src/index.js bundle.js & live-server --watch=src/,bundle.js --ignore=src/index.js"
   },
   "repository": {
     "type": "git",
@@ -32,8 +32,8 @@
   "devDependencies": {
     "eslint": "4.3.0",
     "husky": "0.14.3",
-    "webpack": "3.4.1",
-    "webpack-dev-server": "2.6.1"
+    "live-server": "1.2.0",
+    "webpack": "3.4.1"
   },
   "dependencies": {
     "aframe": "0.6.1"

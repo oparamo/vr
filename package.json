@@ -10,7 +10,7 @@
     "build": "webpack src/index.js bundle.js",
     "lint": "eslint --fix .",
     "precommit": "npm run lint",
-    "start": "webpack --watch src/index.js bundle.js & live-server --watch=src/,bundle.js --ignore=src/index.js"
+    "start": "webpack --watch src/index.js bundle.js & live-server --watch=src/,bundle.js,index.html --ignore=src/index.js"
   },
   "repository": {
     "type": "git",
